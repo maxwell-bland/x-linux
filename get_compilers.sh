@@ -87,7 +87,11 @@ get_openrisc () {
 }
 
 get_parisc () {
-	sudo apt install gcc-hppa-linux-gnu gcc-hppa64-linux-gnu
+	sudo apt install gcc-hppa-linux-gnu
+}
+
+get_parisc64 () {
+	sudo apt install gcc-hppa64-linux-gnu
 }
 
 get_xtensa () {

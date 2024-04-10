@@ -2,7 +2,7 @@
 Now 100% Docker-free!
 
 This project provides some hack bash scripts to perform compilation of the
-linux kernel for 20 different microarchitectures.
+linux kernel for 21 different microarchitectures.
 
 (In a Debian development environment.)
 
@@ -43,6 +43,7 @@ mips
 nios2
 openrisc
 parisc
+parisc64
 powerpc
 riscv
 s390

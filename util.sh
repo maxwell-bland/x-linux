@@ -16,7 +16,8 @@ initialize_cross_compile_prefixes () {
 	CROSS_COMPILE_PREFIX[mips]=mips-linux-gnu-
 	CROSS_COMPILE_PREFIX[nios2]=nios2-elf-
 	CROSS_COMPILE_PREFIX[openrisc]=or1k-linux-
-	CROSS_COMPILE_PREFIX[parisc]=hppa64-linux-gnu-
+	CROSS_COMPILE_PREFIX[parisc]=hppa-linux-gnu-
+	CROSS_COMPILE_PREFIX[parisc64]=hppa64-linux-gnu-
 	CROSS_COMPILE_PREFIX[powerpc]=powerpc-linux-gnu-
 	CROSS_COMPILE_PREFIX[riscv]=riscv64-linux-gnu-
 	CROSS_COMPILE_PREFIX[s390]=s390x-linux-gnu-
