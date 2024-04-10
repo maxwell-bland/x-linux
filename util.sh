@@ -1,6 +1,8 @@
 #!/usr/bin/bash
 
 declare -A CROSS_COMPILE_PREFIX
+declare -A CROSS_COMPILE_EXTRA
+
 initialize_cross_compile_prefixes () {
 	CROSS_COMPILE_PREFIX[alpha]=alpha-linux-gnu-
 	CROSS_COMPILE_PREFIX[arc]=arc-linux-gnu-
@@ -24,4 +26,5 @@ initialize_cross_compile_prefixes () {
 	CROSS_COMPILE_PREFIX[x86]=x86-64-linux-gnu-
 	CROSS_COMPILE_PREFIX[xtensa]=xtensa-buildroot-linux-uclibc-
 }
+
 export CROSS_COMPILE_PREFIX

@@ -48,21 +48,6 @@ get_csky() {
 	popd
 }
 
-get_hexagon () {
-	if [[ "$(which qpm-cli)" == "" ]]; then
-		echo 'Please get the qualcomm package manager from https://qpm.qualcomm.com/'
-	fi
-	echo "Please run the following commands in a new shell:"
-	echo "qpm-cli --login"
-	echo "qpm-cli --license-activate hexagonsdk5.x"
-	echo "qpm-cli --license-activate compute1.x"
-	echo "qpm-cli --install hexagonsdk5.x"
-	echo 'Please symbolically link the Hexagon_SDK folder to x-linux/compilers/hexagon/'
-	echo 'The default install directory is something like "/local/mnt/workspace/Qualcomm/Hexagon_SDK/"'
-	echo 'Hit enter when done.'
-	read 
-}
-
 get_loongarch () {
 	echo 'Please fetch the latest
 	x86_64-cross-tools-loongarch64-gcc-libc.tar.xz from
@@ -193,5 +178,5 @@ for a in $arches; do
 	register_compiler $a
 done
 echo '---'
-echo 'Please set PATH as follows'
-echo PATH=$PATH
+echo 'Please set PATH to the following'
+echo $PATH

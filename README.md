@@ -2,13 +2,11 @@
 Now 100% Docker-free!
 
 This project provides some hack bash scripts to perform compilation of the
-linux kernel for 21 different microarchitectures.
+linux kernel for 20 different microarchitectures.
 
 (In a Debian development environment.)
 
-Some steps (installing compilers behind proprietary account systems) are
-manual, but if we build a bypass for QCOM's silly login system, etc, e.g.
-through bs4 and selenium, I'll merge it.
+Some steps (installing compilers stored behind login systems) are manual.
 
 Please also feel free to submit improvements!
 
@@ -38,7 +36,6 @@ arc
 arm
 arm64
 csky
-hexagon
 loongarch
 m68k
 microblaze
@@ -57,6 +54,18 @@ xtensa
 ```
 
 This list should match `supported_arches.txt`.
+
+## A note on arch/hexagon
+
+The hexagon support in the linux kernel comes from an old target of the QCOM
+comet processor, and I spent a while trying to get the current Hexagon SDK to
+support compiling Linux for the comet, but the original and modern hexagon-gcc
+are lost to time and kernel support, as the assembler creates trouble for the
+modern build system. If some QCOM engineer knows a way to restore support,
+please open a pull request or email me at mbland@motorola.com.
+
+More details on comet are given by Rob Landley at
+`https://landley.net/notes-2012.html#24-02-2012`.
 
 ## TODO
 

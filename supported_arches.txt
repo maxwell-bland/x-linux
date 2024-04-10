@@ -3,7 +3,6 @@ arc
 arm
 arm64
 csky
-hexagon
 loongarch
 m68k
 microblaze
