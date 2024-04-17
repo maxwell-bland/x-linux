@@ -136,6 +136,10 @@ get_powerpc () {
 	sudo apt install gcc-powerpc-linux-gnu
 }
 
+get_powerpc64 () {
+	sudo apt install gcc-powerpc64-linux-gnu
+}
+
 get_riscv () {
 	sudo apt install gcc-riscv64-linux-gnu
 }

@@ -2,7 +2,12 @@
 Now 100% Docker-free!
 
 This project provides some hack bash scripts to perform compilation of the
-linux kernel for 21 different microarchitectures.
+linux kernel for 22 different microarchitectures.
+
+However, you may also be looking for Intel's 0day system (and this may 
+be exactly what you are looking for!)
+
+https://github.com/intel/lkp-tests
 
 (In a Debian development environment.)
 
@@ -30,31 +35,7 @@ More in depth:
 
 ## Supported Architectures
 
-```
-alpha
-arc
-arm
-arm64
-csky
-loongarch
-m68k
-microblaze
-mips
-nios2
-openrisc
-parisc
-parisc64
-powerpc
-riscv
-s390
-sh
-sparc
-um
-x86
-xtensa
-```
-
-This list should match `supported_arches.txt`.
+See `supported_arches.txt`.
 
 ## A note on arch/hexagon
 

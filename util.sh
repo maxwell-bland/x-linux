@@ -19,6 +19,7 @@ initialize_cross_compile_prefixes () {
 	CROSS_COMPILE_PREFIX[parisc]=hppa-linux-gnu-
 	CROSS_COMPILE_PREFIX[parisc64]=hppa64-linux-gnu-
 	CROSS_COMPILE_PREFIX[powerpc]=powerpc-linux-gnu-
+	CROSS_COMPILE_PREFIX[powerpc64]=powerpc64-linux-gnu-
 	CROSS_COMPILE_PREFIX[riscv]=riscv64-linux-gnu-
 	CROSS_COMPILE_PREFIX[s390]=s390x-linux-gnu-
 	CROSS_COMPILE_PREFIX[sh]=sh4-linux-gnu-

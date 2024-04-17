@@ -12,6 +12,7 @@ openrisc
 parisc
 parisc64
 powerpc
+powerpc64
 riscv
 s390
 sh
