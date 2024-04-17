@@ -14,6 +14,15 @@ compile_generic() {
 	echo make clean';'\
 		make ARCH=$arch $crossc defconfig';' \
 		make ARCH=$arch $crossc $@
+	echo make clean';'\
+		make ARCH=$arch $crossc randconfig';' \
+		make ARCH=$arch $crossc $@
+	echo make clean';'\
+		make ARCH=$arch $crossc randconfig';' \
+		make ARCH=$arch $crossc $@
+	echo make clean';'\
+		make ARCH=$arch $crossc randconfig';' \
+		make ARCH=$arch $crossc $@
 }
 
 initialize_cross_compile_prefixes

@@ -2,10 +2,11 @@
 Now 100% Docker-free!
 
 This project provides some hack bash scripts to perform compilation of the
-linux kernel for 22 different microarchitectures.
+linux kernel for 22 different microarchitectures with the default config and 3
+random configs to test for compiler errors in your linux kernel patches.
 
-However, you may also be looking for Intel's 0day system (and this may 
-be exactly what you are looking for!)
+However, you may also be looking for Intel's 0day system which runs the linux
+kernel test bot (and this may be exactly what you are looking for!)
 
 https://github.com/intel/lkp-tests
 
@@ -30,8 +31,11 @@ More in depth:
 - `./get_compilers.sh` has shell scripts to grab specific compilers for
   specific microarchitectures.
 - `./compile.sh` should be run inside the linux kernel directory and attempts
-  to `make clean; make defconfig; make` For each supported architecture,
-  storing compilation results into `build_log_$arch.txt` files.
+  to `make clean; make defconfig; make` and then `make clean; make randconfig;
+  make` three times for each architecture in `supported_arches.txt`, storing
+  compilation results into `build_log_$arch.txt` files. Edit this file if you
+  want to increase the number of random configs tested, test default configs,
+  etc.
 
 ## Supported Architectures
 
@@ -45,6 +49,9 @@ support compiling Linux for the comet, but the original and modern hexagon-gcc
 are lost to time and kernel support, as the assembler creates trouble for the
 modern build system. If some QCOM engineer knows a way to restore support,
 please open a pull request or email me at mbland@motorola.com.
+
+I think that intel's 0day might have support for hexagon, though I have not
+tried it.
 
 More details on comet are given by Rob Landley at
 `https://landley.net/notes-2012.html#24-02-2012`.
