@@ -2,15 +2,13 @@
 Now 100% Docker-free!
 
 This project provides some hack bash scripts to perform compilation of the
-linux kernel for 22 different microarchitectures with the default config and 3
-random configs to test for compiler errors in your linux kernel patches.
-
-However, you may also be looking for Intel's 0day system which runs the linux
-kernel test bot (and this may be exactly what you are looking for!)
-
-https://github.com/intel/lkp-tests
+linux kernel for 22 different microarchitectures with 3 random configs to test
+for compiler errors in your linux kernel patches.
 
 (In a Debian development environment.)
+
+However, you may also be looking for Intel's 0day system which runs the linux
+kernel test bot: `https://github.com/intel/lkp-tests`
 
 Some steps (installing compilers stored behind login systems) are manual.
 
@@ -31,11 +29,10 @@ More in depth:
 - `./get_compilers.sh` has shell scripts to grab specific compilers for
   specific microarchitectures.
 - `./compile.sh` should be run inside the linux kernel directory and attempts
-  to `make clean; make defconfig; make` and then `make clean; make randconfig;
-  make` three times for each architecture in `supported_arches.txt`, storing
-  compilation results into `build_log_$arch.txt` files. Edit this file if you
-  want to increase the number of random configs tested, test default configs,
-  etc.
+  to `make clean; make randconfig; make` three times for each architecture in
+  `supported_arches.txt`, storing compilation results into
+  `build_log_$arch_$i.txt` files. Edit this file if you want to increase the
+  number of random configs tested, test default configs, etc.
 
 ## Supported Architectures
 
